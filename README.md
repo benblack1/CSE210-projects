@@ -1,5 +1,7 @@
 # cse210-ww-student-template
-This is the starter code for students in the worldwide content version of CSE 210.
+This has been pirated by Ian Black, the one and only. Granted, I think legally if I make enough changes, it wouldn't be pirating anymore, would it?
+
+Good luck.
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
