@@ -9,7 +9,7 @@ class Program
         Console.WriteLine("Please enter your name: ");
         string name = PromptUserName();
 
-        Console.WriteLine("Please provide your favorite number? ");
+        Console.WriteLine("Please provide your favorite number: ");
         int number = PromptUserNumber();
 
         int squaredNumber = SquareNumber(number);
