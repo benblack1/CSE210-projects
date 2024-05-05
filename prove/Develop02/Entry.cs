@@ -2,11 +2,11 @@ using System;
 
 public class Entry
 {
-    public DateTime Date;
-    public string PromptText;
-    public string EntryText;
+    public string Date {get; set;}
+    public string PromptText {get; set;}
+    public string EntryText {get; set;}
 
-    public Entry(DateTime date, string promptText, string entryText)
+    public Entry(string date, string promptText, string entryText)
     {
         Date = date;
         PromptText = promptText;
