@@ -14,7 +14,7 @@ public class Word
     
     public void Hide()
     {
-        _text = "___";
+        _text = new string('_', _text.Length);
         _isHidden = true;
     }
 

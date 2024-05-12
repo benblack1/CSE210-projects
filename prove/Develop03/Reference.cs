@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 
 public class Reference
 {
@@ -22,6 +23,23 @@ public class Reference
         _endVerse = endVerse;
     }
 
+    public Reference(string reference)
+    {
+        var match = Regex.Match(reference, @"^(?<book>\D+)\s(?<chapter>\d+):(?<startVerse>\d+)(-(?<endVerse>\d+))?$");
+
+        _book = match.Groups["book"].Value;
+        _chapter = int.Parse(match.Groups["chapter"].Value);
+        _verse = int.Parse(match.Groups["startVerse"].Value);
+        var endVerseGroup = match.Groups["endVerse"];
+        if (endVerseGroup.Success)
+        {
+            _endVerse = int.Parse(endVerseGroup.Value);
+        }
+        else
+        {
+            _endVerse = 0;
+        }
+    }
     public string GetDisplayText()
     {
         if (_endVerse != 0)
