@@ -22,7 +22,7 @@ public class Verse
     public void HideRandomVerses()
     {
         Random random = new Random();
-        List<Word> randomWords = _words.OrderBy(x => random.Next()).Take(2).ToList();
+        List<Word> randomWords = _words.Where(x => !x.IsHidden()).OrderBy(x => random.Next()).Take(2).ToList();
 
         foreach (Word word in randomWords)
         {
